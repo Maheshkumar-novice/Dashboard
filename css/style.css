@@ -214,6 +214,11 @@ body {
   font-size: 2rem;
 }
 
+/* Colors */
+.sidebar-link {
+  color: var(--normal-font-color);
+}
+
 /* Borders */
 .sidebar {
   border: 2px solid var(--border-color);
