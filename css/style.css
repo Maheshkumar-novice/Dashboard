@@ -1,3 +1,4 @@
+/* Default */
 :root {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -25,6 +26,7 @@ button {
   font-size: 100%;
 }
 
+/* Layout */
 body {
   display: grid;
   grid-template-columns: minmax(max-content, 20%) minmax(80%, 1fr);
