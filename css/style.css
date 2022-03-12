@@ -26,6 +26,20 @@ button {
   font-size: 100%;
 }
 
+/* Color Variables */
+:root {
+  --color-1: #222831;
+  --color-2: #393e46;
+  --color-3: #00adb5;
+  --color-4: #eeeeee;
+  --primary-bg: var(--color-1);
+  --secondary-bg: var(--color-2);
+  --heading-font: var(--color-3);
+  --normal-font: var(--color-4);
+  --accent-font: var(--color-3);
+  --border-color: var(--color-3);
+}
+
 /* Layout */
 body {
   display: grid;
