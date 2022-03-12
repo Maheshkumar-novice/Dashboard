@@ -58,6 +58,15 @@ a {
   color: var(--accent-font-color);
 }
 
+img {
+  color: var(--accent-font-color);
+}
+
+span,
+label {
+  color: var(--accent-font-color);
+}
+
 body {
   background-color: var(--primary-bg-color);
 }
@@ -124,6 +133,12 @@ body {
   grid-template-rows: 10% repeat(2, 1fr);
 }
 
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -170,4 +185,50 @@ body {
 
 .trending {
   grid-area: trending;
+}
+
+/* Dimensions */
+.sidebar-link {
+  color: var(--normal-font-color);
+  width: max-content;
+}
+
+/* Spacing */
+.sidebar > * {
+  padding-left: 10%;
+}
+
+.sidebar-list {
+  margin-top: 30px;
+}
+
+/* Typography */
+.title {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.sidebar a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+/* Borders */
+.sidebar {
+  border: 2px solid var(--border-color);
+}
+
+.logo {
+  border-bottom: 2px dashed var(--border-color);
+}
+
+/* Additional Stylings */
+.sidebar-list {
+  list-style: none;
+}
+
+/* States */
+.sidebar-link:hover {
+  color: var(--accent-font-color);
 }
