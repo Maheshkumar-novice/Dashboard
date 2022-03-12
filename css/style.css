@@ -50,6 +50,22 @@ body {
   grid-template-rows: 10% repeat(2, 1fr);
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav ul {
+  display: grid;
+  gap: 20px;
+}
+
+.operations ul {
+  display: grid;
+  gap: 20px;
+}
+
 .main {
   grid-area: main;
   display: grid;
