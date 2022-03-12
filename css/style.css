@@ -30,7 +30,7 @@ button {
 body {
   display: grid;
   grid-template-columns: minmax(max-content, 20%) minmax(80%, 1fr);
-  grid-template-rows: auto 1fr;
+  grid-template-rows: 15% 1fr;
   grid-template-areas:
     "sidebar header"
     "sidebar main";
@@ -41,6 +41,38 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search {
+  flex: 1;
+}
+
+.user-info-short {
+  display: flex;
+  gap: 10px;
+}
+
+.header-bottom {
+  display: flex;
+}
+
+.user-info-long {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-bottom .actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .sidebar {
