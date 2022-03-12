@@ -32,12 +32,40 @@ button {
   --color-2: #393e46;
   --color-3: #00adb5;
   --color-4: #eeeeee;
-  --primary-bg: var(--color-1);
-  --secondary-bg: var(--color-2);
-  --heading-font: var(--color-3);
-  --normal-font: var(--color-4);
-  --accent-font: var(--color-3);
+  --primary-bg-color: var(--color-1);
+  --secondary-bg-color: var(--color-2);
+  --heading-font-color: var(--color-3);
+  --normal-font-color: var(--color-4);
+  --accent-font-color: var(--color-3);
   --border-color: var(--color-3);
+}
+
+/* Default Colors */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-font-color);
+}
+
+p {
+  color: var(--normal-font-color);
+}
+
+a {
+  color: var(--accent-font-color);
+}
+
+body {
+  background-color: var(--primary-bg-color);
+}
+
+*,
+*::before,
+*::after {
+  border-color: var(--border-color);
 }
 
 /* Layout */
