@@ -50,4 +50,22 @@ body {
 
 .main {
   grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr minmax(min-content, 300px);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "projects announcements"
+    "projects trending";
+}
+
+.projects {
+  grid-area: projects;
+}
+
+.announcements {
+  grid-area: announcements;
+}
+
+.trending {
+  grid-area: trending;
 }
