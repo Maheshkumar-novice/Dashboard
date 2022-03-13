@@ -324,6 +324,10 @@ label[for="search"] {
   margin-bottom: 5px;
 }
 
+.announcement-title {
+  margin-bottom: 5px;
+}
+
 /* Typography */
 .title {
   font-size: 3rem;
