@@ -80,8 +80,8 @@ body {
 /* Layout */
 body {
   display: grid;
-  grid-template-columns: minmax(max-content, 20%) minmax(80%, 1fr);
-  grid-template-rows: auto 1fr;
+  grid-template-columns: minmax(max-content, 15%) minmax(80%, 1fr);
+  grid-template-rows: 150px 1fr;
   grid-template-areas:
     "sidebar header"
     "sidebar main";
@@ -167,7 +167,7 @@ label[for="search"] {
 .main {
   grid-area: main;
   display: grid;
-  grid-template-columns: 1fr minmax(min-content, 300px);
+  grid-template-columns: 3fr 1fr;
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas:
     "projects announcements"
@@ -179,21 +179,46 @@ label[for="search"] {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
+  gap: 15px;
 }
 
 .projects-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: repeat(auto-fit, 200px);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fill, 200px);
   gap: 20px;
 }
 
 .announcements {
   grid-area: announcements;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .trending {
   grid-area: trending;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.announcements-wrapper,
+.trending-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.trending-item {
+  display: flex;
+  gap: 15px;
 }
 
 /* Dimensions */
@@ -222,6 +247,11 @@ label[for="search"] {
   height: 40px;
 }
 
+.trending-image {
+  height: 40px;
+  width: 40px;
+}
+
 /* Spacing */
 .sidebar > * {
   padding-left: 10%;
@@ -232,7 +262,7 @@ label[for="search"] {
 }
 
 .header {
-  padding: 10px 40px;
+  padding: 5px 40px;
 }
 
 .search-input {
@@ -242,7 +272,7 @@ label[for="search"] {
 
 .header-bottom {
   margin-top: 10px;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
 }
 
 .name {
@@ -252,6 +282,46 @@ label[for="search"] {
 .post-action-button {
   padding: 10px 15px;
   margin-right: 10px;
+}
+
+.main {
+  padding: 15px;
+}
+
+.project {
+  padding: 15px;
+}
+
+.actions {
+  margin-top: 35px;
+}
+
+.project-title {
+  margin-bottom: 10px;
+}
+
+.announcements,
+.trending {
+  margin-left: 20px;
+}
+
+.announcements-wrapper,
+.trending-wrapper {
+  margin-right: 15px;
+  padding: 25px;
+}
+
+.announcement,
+.trending-item {
+  padding-bottom: 20px;
+}
+
+.trending {
+  margin-top: 15px;
+}
+
+.trending-name {
+  margin-bottom: 5px;
 }
 
 /* Typography */
@@ -285,6 +355,10 @@ label[for="search"] {
   font-weight: bold;
 }
 
+.trending-name {
+  font-weight: bold;
+}
+
 /* Colors */
 .sidebar-link {
   color: var(--normal-font-color);
@@ -297,6 +371,19 @@ label[for="search"] {
 
 .post-action-button {
   color: var(--normal-font-color);
+  background-color: var(--secondary-bg-color);
+}
+
+.action-button {
+  background-color: transparent;
+}
+
+.project {
+  background-color: var(--secondary-bg-color);
+}
+
+.announcements-wrapper,
+.trending-wrapper {
   background-color: var(--secondary-bg-color);
 }
 
@@ -327,6 +414,25 @@ body {
   border-radius: 25px;
 }
 
+.project {
+  border-left: 6px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.action-button {
+  border: none;
+}
+
+.announcements-wrapper,
+.trending-wrapper {
+  border-radius: 5px;
+}
+
+.announcement:not(:last-child),
+.trending-item:not(:last-child) {
+  border-bottom: 2px solid var(--border-color);
+}
+
 /* Additional Stylings */
 .sidebar-list {
   list-style: none;
@@ -349,8 +455,17 @@ body {
   cursor: pointer;
 }
 
+.action-button {
+  cursor: pointer;
+}
+
+.main {
+  overflow: auto;
+}
+
 /* States */
-.sidebar-link:hover {
+.sidebar-link:hover,
+.sidebar-link:focus {
   color: var(--accent-font-color);
 }
 
@@ -361,4 +476,22 @@ body {
 .post-action-button:hover,
 .post-action-button:focus {
   border: 2px solid var(--border-color);
+  background-color: var(--border-color);
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-bg-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-bg-color);
 }
