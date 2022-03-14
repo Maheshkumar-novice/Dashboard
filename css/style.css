@@ -91,7 +91,7 @@ body {
   grid-area: header;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
 }
 
 .header-top {
@@ -107,7 +107,7 @@ body {
   align-items: center;
 }
 
-label[for="search"] {
+.search-label {
   display: flex;
   align-items: center;
 }
@@ -154,12 +154,7 @@ label[for="search"] {
   gap: 10px;
 }
 
-.nav ul {
-  display: grid;
-  gap: 20px;
-}
-
-.operations ul {
+.sidebar-list {
   display: grid;
   gap: 20px;
 }
@@ -223,7 +218,6 @@ label[for="search"] {
 
 /* Dimensions */
 .sidebar-link {
-  color: var(--normal-font-color);
   width: max-content;
 }
 
@@ -232,12 +226,12 @@ label[for="search"] {
   width: 50%;
 }
 
-.user-info-short img {
+.user-short-image {
   height: 40px;
   width: 40px;
 }
 
-.user-info-long img {
+.user-long-image {
   height: 60px;
   width: 60px;
 }
@@ -313,7 +307,7 @@ label[for="search"] {
 
 .announcement,
 .trending-item {
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .trending {
@@ -334,7 +328,7 @@ label[for="search"] {
   font-weight: 500;
 }
 
-.sidebar a {
+.sidebar-link {
   text-decoration: none;
   font-weight: 500;
   font-size: 2rem;
